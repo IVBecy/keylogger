@@ -27,6 +27,3 @@ if __name__ == "__main__":
       print("Exiting...")
       s.close()
       sys.exit()
-
-
-    
