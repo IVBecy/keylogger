@@ -3,13 +3,14 @@
 ### This script was made as a proof of concept, I have no sinister intentions with it
 
 # How it works:
-On the host machine, `server.py` needs to be run. After that, put and run `client.py` or `run.sh` on the
-"victims" machine. Note that `client.py` will only run if python and all packages are installed. If not,
-run `run.sh`, that will install pip and all the packages that will be needed, keep in mind that python itself still
-needs to be installed. 
+- 1: Change the **HOST** and **PORT** constants in `client.py`, so that it will point to your machine.
+- 2: Run `server.py` on your machine.
+- 3: Put and run `client.py` on the victims machine if pip and packages are installed. If not, just run `run.sh`.
+- 4: Wait for the victim to type something whilst the script is running...
 
 # Libraries:
 - keyboard
 - socket.py
 - sys
-- to install all packages, just run `pip install -r requirements.txt`
+
+To install all packages, just run `pip install -r requirements.txt`
