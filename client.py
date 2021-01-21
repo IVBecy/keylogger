@@ -1,5 +1,5 @@
 # Modules
-import socket,time,keyboard
+import socket,keyboard,sys
 
 # Variables
 HOST = "192.168.0.92"

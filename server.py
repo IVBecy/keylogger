@@ -1,5 +1,5 @@
 # Modules
-import socket,time,sys
+import socket,sys
 
 # Variables to be used
 HOST = "0.0.0.0"
