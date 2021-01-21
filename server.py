@@ -8,11 +8,11 @@ BUFFER = 1024
 
 # Waiting for connection
 def listener():
+  global incoming,s
   s = socket.socket()
   s.bind((HOST,PORT))
   s.listen(1)
   print(f"Listening as {HOST}:{PORT}")
-  global incoming
   incoming,addr = s.accept()
   print(f"Connected to {addr[0]}:{addr[1]}")
   print("\nListening for keystrokes")

