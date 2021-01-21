@@ -27,3 +27,6 @@ if __name__ == "__main__":
       print("Exiting...")
       s.close()
       sys.exit()
+    except ConnectionResetError:
+      print("The connection was closed by the client")
+      sys.exit()
